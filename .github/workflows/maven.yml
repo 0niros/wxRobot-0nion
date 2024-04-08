@@ -31,10 +31,9 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Copy dependencies
       run: |
+        tree
         mvn dependency:copy-dependencies -DoutputDirectory=./lib
         mkdir publish
-        mv *.jar ./publish
-        mv dockerfile ./publish
         mv lib ./publish
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
