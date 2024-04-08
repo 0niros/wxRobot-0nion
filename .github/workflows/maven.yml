@@ -32,6 +32,7 @@ jobs:
         mv ./target/*.jar ./publish
         mvn dependency:copy-dependencies -DoutputDirectory=./lib
         mv lib ./publish
+        mv ./ci/* ./publish
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Publish
