@@ -32,6 +32,7 @@ jobs:
     - name: Copy dependencies
       run: |
         tree
+        chmod 777 -R **
         mkdir publish
         mv *.jar ./publish
         mvn dependency:copy-dependencies -DoutputDirectory=./lib
