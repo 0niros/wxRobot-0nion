@@ -3,6 +3,6 @@ services:
   wx-bot:
     image: wxbot-0nion:latest
     ports:
-      - "18080:8080"
+      - "18888:8080"
     volumes:
       - ./application.properties:/etc/wxbot/application.properties

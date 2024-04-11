@@ -1,3 +1,5 @@
+create database if not exists `wx_robot`;
+
 use wx_robot;
 
 create table `msg_record`
@@ -11,6 +13,8 @@ create table `msg_record`
     `content_or_url` text not null,
     `time` bigint(20) not null
 );
+create index `idx_time` ON `msg_record`(`time`);
+create index `idx_room_name` ON `msg_record`(`room_name`);
 
 create table `scheduler` (
     `id` bigint(20) not null primary key,

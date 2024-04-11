@@ -1,3 +1,3 @@
 #!/bin/sh
 
-java -classpath /app:/app/lib --spring.config.location=/etc/wxbot/application.properties cn.com.oniros.WxRobotApplication
+java -XX:+UseG1GC -Xmx512m -Xms512m -classpath /app/*:/app/lib/* cn.com.oniros.WxRobotApplication --spring.config.location=/etc/wxbot/application.properties
