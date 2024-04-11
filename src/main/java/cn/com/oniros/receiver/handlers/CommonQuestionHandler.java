@@ -41,7 +41,12 @@ public class CommonQuestionHandler extends AbstractMessageHandler {
     protected String doHandle(String content, SourceVO sourceVO) {
         String question = content.replaceAll("@" + wxRobotServerConfig.getRobotName(), "");
         String from = sourceVO.getFrom().getPayload().getName();
-        KimiResponse response = kimiClient.doKimiRequest(question);
+        KimiResponse response;
+        try {
+            response = kimiClient.doKimiRequest(question);
+        } catch (Exception e) {
+            return String.format(TextConstant.KIMI_CANT_RESPONSE, from);
+        }
 
         return String.format(TextConstant.QUESTION_RESPONSE, from, response.getChoices().get(0).getMessage().getContent());
     }

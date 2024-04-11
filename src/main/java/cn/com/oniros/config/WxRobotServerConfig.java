@@ -22,6 +22,9 @@ public class WxRobotServerConfig {
     @Value("${wx.robot.name}")
     private String robotName;
 
+    @Value("${wx.robot.nickname}")
+    private String nickname;
+
     public String generateRequestUrl(String url) {
         return serverLocation + url + "?token=" + token;
     }

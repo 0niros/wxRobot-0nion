@@ -41,7 +41,7 @@ public class WxWebHookController {
                                                                     @RequestPart(value = "isMentioned", required = false) String isMentioned,
                                                                     @RequestPart(value = "isMsgFromSelf", required = false) String isSelfMessage,
                                                                     MultipartHttpServletRequest request) {
-        if (type == null || type.isBlank() || type.toLowerCase().equals("unknown") || "1".equals(isSelfMessage)) {
+        if (type == null || type.isBlank() || type.equalsIgnoreCase("unknown") || "1".equals(isSelfMessage)) {
             return new CommonResponse<>(true, new CommonMessageResponseVO("text", ""));
         }
         byte[] content = TextConstant.CONTENT_IN.getBytes();
