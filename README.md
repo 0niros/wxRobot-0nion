@@ -1,4 +1,4 @@
-<div align="center" style="font-size: 20px">
+<div align="center" style="font-size: 35px">
     Wechat AI Assistant - <span style="color: deeppink">小洋葱</span> 
 </div>
 
