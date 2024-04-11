@@ -34,7 +34,7 @@ By the way, Dark Souls is the best game🕹️ in the world.
 
 ### 2.1 Data stream 🌌🌌
 
-![](./img/data-stream.drawio.png)
+![](https://github.com/0niros/wxRobot-0nion/blob/master/img/data-stream.drawio.png)
 
 ### 2.2 API
 
